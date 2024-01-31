@@ -7,11 +7,10 @@
     "bun",
     "bunjs",
     "typescript",
-    "template",
-    "npm",
-    "np",
-    "publish",
-    "git"
+    "list",
+    "abstract",
+    "virtual",
+    "infinite"
   ],
   "repository": {
     "type": "git",
@@ -35,15 +34,10 @@
     "test": "bun test",
     "build": "bun i && bun run fix-package-name && rm -rf *.tsbuildinfo && rm -rf dist/*.* && bun run bundler/bundler.ts && bun run test && bun run build:declaration",
     "build:declaration": "tsc --emitDeclarationOnly --project tsconfig.types.json",
-    "build:example": "cd example && bun i && bun run build && cd ..",
-    "list": "bun run samples/list-scripts.tsx",
-    "example": "cd example && bun start && cd ..",
-    "fileSample": "bun run samples/file.tsx && cat samples/data/test.json",
-    "httpSample": "bun run samples/server.tsx",
     "make-repo-ssh": "./make-repo-ssh.sh",
     "fix-package-name": "npm explore package-name-fixer -- bun start \"$(pwd)\"",
     "autocommit": "npm explore @dobuki/autocommit -- bun run autocommit \"$(pwd)\"",
-    "np": "bun run build && bun run build:example && bun run make-repo-ssh && bun run autocommit && np"
+    "np": "bun run build && bun run make-repo-ssh && bun run autocommit && np"
   },
   "publishConfig": {
     "access": "public"

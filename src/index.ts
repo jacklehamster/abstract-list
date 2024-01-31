@@ -1,5 +1,3 @@
-export class Hello {
-  static hello() {
-    return "Hello World!";
-  }
-}
+import { map, forEach, List } from "./List"
+
+export { map, forEach, List };
