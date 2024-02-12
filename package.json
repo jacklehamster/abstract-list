@@ -63,5 +63,8 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "dok-types": "^1.0.5"
   }
 }
