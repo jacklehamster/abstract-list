@@ -1,3 +1,5 @@
-import { map, forEach, List } from "./List"
+import { List } from "./List"
+import { map, forEach } from "./utils/utils";
 
-export { map, forEach, List };
+export { map, forEach };
+export type { List };
