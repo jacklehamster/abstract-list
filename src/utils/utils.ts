@@ -4,11 +4,12 @@ export function forEach<T>(list: List<T> | undefined, callback: (value: T | unde
   if (list) {
     const length = list.length.valueOf();
     for (let i = 0; i < length; i++) {
-      const elem = list.at(i);
-      callback(elem, i);
+      callback(list.at(i), i);
     }
   }
-} export function map<T, R>(
+}
+
+export function map<T, R>(
   list: List<T>,
   callback: (value: T | undefined, index: number) => R,
   array: (R | undefined)[] = []): (R | undefined)[] {
@@ -20,4 +21,17 @@ export function forEach<T>(list: List<T> | undefined, callback: (value: T | unde
     r[i] = callback(elem, i);
   }
   return r;
+}
+
+export function any<T>(list: List<T> | undefined, condition: (value: T, index: number) => boolean): boolean {
+  if (list) {
+    const length = list.length.valueOf();
+    for (let i = 0; i < length; i++) {
+      const elem = list.at(i);
+      if (elem !== undefined && condition(elem, i)) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
