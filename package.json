@@ -34,11 +34,9 @@
     "test": "bun test",
     "build": "bun i && bun run fix-package-name && rm -rf *.tsbuildinfo && rm -rf dist/*.* && bun run bundler/bundler.ts && bun run test && bun run build:declaration",
     "build:declaration": "tsc --emitDeclarationOnly --project tsconfig.types.json",
-    "make-repo-ssh": "./make-repo-ssh.sh",
     "fix-package-name": "npm explore package-name-fixer -- bun start \"$(pwd)\"",
-    "autocommit": "npm explore @dobuki/autocommit -- bun run autocommit \"$(pwd)\"",
-    "np": "bun run build && bun run make-repo-ssh && bun run autocommit && np",
-    "auto-publish": "npm explore @dobuki/auto-publish -- bun run auto-publish \"$(pwd)\""
+    "auto-publish": "npm explore @dobuki/auto-publish -- bun run auto-publish \"$(pwd)\"",
+    "np": "bun run build && bun run auto-publish"
   },
   "publishConfig": {
     "access": "public"
@@ -48,7 +46,6 @@
   ],
   "devDependencies": {
     "@dobuki/auto-publish": "^1.0.5",
-    "@dobuki/autocommit": "^1.0.11",
     "@types/bun": "^1.0.8",
     "@types/jest": "^29.5.12",
     "@types/mocha": "^10.0.3",
