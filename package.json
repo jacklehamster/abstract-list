@@ -47,7 +47,7 @@
     "dist"
   ],
   "devDependencies": {
-    "@dobuki/auto-publish": "^1.0.4",
+    "@dobuki/auto-publish": "^1.0.5",
     "@dobuki/autocommit": "^1.0.11",
     "@types/bun": "^1.0.8",
     "@types/jest": "^29.5.12",
