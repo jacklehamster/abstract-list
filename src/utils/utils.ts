@@ -24,19 +24,19 @@ export function map<T, R>(
 }
 
 export function any<T>(list: List<T> | undefined, condition: (value: T, index: number) => boolean): boolean {
-  return find(list, condition) !== undefined;
+  return find(list, condition) >= 0;
 }
 
 
-export function find<T>(list: List<T> | undefined, condition: (value: T, index: number) => boolean): T | undefined {
+export function find<T>(list: List<T> | undefined, condition: (value: T, index: number) => boolean): number {
   if (list) {
     const length = list.length.valueOf();
     for (let i = 0; i < length; i++) {
       const elem = list.at(i);
       if (elem !== undefined && condition(elem, i)) {
-        return elem;
+        return i;
       }
     }
   }
-  return undefined;
+  return -1;
 }
