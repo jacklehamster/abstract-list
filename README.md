@@ -1,12 +1,12 @@
 # abstract-list
+
 [![npm version](https://badge.fury.io/js/abstract-list.svg)](https://www.npmjs.com/package/abstract-list)
 
 Abstract list for working with arrays that aren't really arrays.
 
-![](https://jacklehamster.github.io/abstract-list/icon.png)
+![icon](https://jacklehamster.github.io/abstract-list/icon.png)
 
-
-# Usage
+## Usage
 
 ```typescript
 //   This is an abstract list
@@ -31,10 +31,9 @@ const squareList: List<number> = {
 
 In [bun-engine](https://github.com/jacklehamster/bun-engine), abstract lists are used to represent a large number sprites flexibly, without storing each sprite structure.
 
-
 ## Install bun
 
-https://bun.sh/
+<https://bun.sh/>
 
 ```bash
 curl -fsSL https://bun.sh/install | bash
