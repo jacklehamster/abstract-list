@@ -2,7 +2,7 @@
   "name": "abstract-list",
   "module": "src/index.ts",
   "description": "Provide an interface for abstract lists. An abstract list behaves like a read-only array, but without storage. It can virtually store an infinite number of elements. It's meant for working flexibly with arrays. Regular arrays can be used as abstract lists as well.",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "keywords": [
     "bun",
     "bunjs",
